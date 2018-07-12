@@ -1,6 +1,9 @@
 sudo: required
 
 language: c 
+branches:
+  only:
+  - /.*/
 
 services:
   - docker
