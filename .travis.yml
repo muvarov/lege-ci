@@ -1,13 +1,14 @@
 sudo: required
 
-language: c 
-branches:
-  only:
-  - /.*/
+language: c
+sudo: required
+dist: trusty
 
 services:
   - docker
 
+install:
+  - sudo apt-get install docker.io
 script:
   - docker run --privileged -i -t -v `pwd`/scripts:/root/scripts muvarov/lege-ci  /root/scripts/build.sh
 
