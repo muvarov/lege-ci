@@ -1,0 +1,12 @@
+sudo: required
+
+language: c 
+
+services:
+  - docker
+
+script:
+  - docker run --privileged -i -t -v `pwd`/scripts:/root/scripts muvarov/lege-ci  /root/scripts/build.sh
+
+after_success:
+  - echo "Test Success"
