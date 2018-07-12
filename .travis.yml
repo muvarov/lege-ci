@@ -10,7 +10,7 @@ services:
 install:
   - sudo apt-get install docker.io
 script:
-  - docker run --privileged -i -t -v `pwd`/scripts:/root/scripts muvarov/lege-ci  /root/scripts/build.sh
+  - docker run --privileged -i -t -v `pwd`/scripts:/root/scripts maximuvarov/lege-ci  /root/scripts/build.sh
 
 after_success:
   - echo "Test Success"
