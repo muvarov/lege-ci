@@ -1,0 +1,11 @@
+language: c
+
+compiler:
+  - gcc
+
+env:
+    - CONF=""
+
+build:
+  ci:
+    - docker run --privileged -i -t -v `pwd`/scripts:/root/scripts maximuvarov/lege-ci  /root/scripts/build.sh
